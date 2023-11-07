@@ -9,6 +9,7 @@ import ColumnTranspositionCipherForm from './components/ColumnTranspositionCiphe
 import CipherOptions from './components/CipherOptions';
 
 import Footer from './components/Footer';
+import { Box } from '@chakra-ui/react'
 
 function App() {
   const [monoalphabeticPlaintext, setInputValue1] = useState('');
@@ -29,15 +30,15 @@ function App() {
     setActiveForm(formName);
   };
 
-  
+
 
   return (
 
-    <div>
+    <Box>
 
       <CipherOptions onButtonClick={handleButtonClick} />
 
-      
+
       {activeForm === 'monoalphabetic' && (
         <MonoalphabeticCipherForm
           inputValue={monoalphabeticPlaintext}
@@ -76,7 +77,7 @@ function App() {
 
 
       <Footer />
-    </div>
+    </Box>
 
 
   );
