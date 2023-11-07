@@ -1,18 +1,28 @@
 import React from 'react';
-import InputField from './InputField';
+
 import { handleInputChange, handleProcessClick, handleClearClick } from '../controllers/ButtonEvents';
+import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Input } from '@chakra-ui/react'
+import { Divider } from '@chakra-ui/react'
 
 function MonoalphabeticCipherForm({ inputValue, setInputValue, outputValue, setOutputValue }) {
   return (
     <div>
+
+      
       <h1>Monoalphabetic Cipher Example</h1>
-      <InputField
+
+
+      <Input
         value={inputValue}
         onChange={(event) => handleInputChange(event, setInputValue)}
         placeholder="Enter text..."
       />
-      <button onClick={() => handleProcessClick(inputValue, setOutputValue)}>Cipher Input</button>
-      <button onClick={() => handleClearClick(setOutputValue)}>Clear Output</button>
+
+      <ButtonGroup gap='4'>
+        <Button colorScheme='green' onClick={() => handleProcessClick(inputValue, setOutputValue)}>Cipher Input</Button>
+        <Button colorScheme='red' onClick={() => handleClearClick(setOutputValue)}>Clear Output</Button>
+      </ButtonGroup>
       <div id="outputBox">
         <p></p>
         <div>{outputValue}</div>
