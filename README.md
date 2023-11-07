@@ -22,6 +22,12 @@ npm create vite@latest
 npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
 ```
 
+## Install react icons
+
+```bash 
+npm install react-icons 
+```
+
 ## Run the app
 
 ```bash
