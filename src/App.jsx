@@ -10,6 +10,7 @@ import CipherOptions from './components/CipherOptions';
 
 import Footer from './components/Footer';
 import { Box } from '@chakra-ui/react'
+import NavbarChakra from './components/Navbar';
 
 function App() {
   const [monoalphabeticPlaintext, setInputValue1] = useState('');
@@ -35,6 +36,8 @@ function App() {
   return (
 
     <Box>
+
+      <NavbarChakra />
 
       <CipherOptions onButtonClick={handleButtonClick} />
 
