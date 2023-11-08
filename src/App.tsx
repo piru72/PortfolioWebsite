@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import { Box } from '@chakra-ui/react'
 
