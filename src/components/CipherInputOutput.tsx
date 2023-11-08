@@ -34,7 +34,7 @@ function CipherInputOutput({
         <Button colorScheme='red' onClick={handleClearOutput}>Clear Output</Button>
       </ButtonGroup>
 
-      <Box id="outputBox" minH="3rem" w="100%" p={2} mt='1rem' border="1px solid" borderColor="gray.300" borderRadius="md" bg="gray.100">
+      <Box id="outputBox" minH="3rem" w="100%" p={2} mt='1rem' border="1px solid" borderColor="gray.300" borderRadius="md" >
         <Text fontSize="lg">{outputValue}</Text>
       </Box>
 
