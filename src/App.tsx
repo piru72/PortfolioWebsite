@@ -2,6 +2,7 @@ import './App.css'
 import { Box } from '@chakra-ui/react'
 
 import CipherOptions from './components/CipherOptions'
+import Monoalphabetic from './components/Monoalphabetic'
 function App() {
   
 
@@ -10,6 +11,7 @@ function App() {
     <Box>
 
       <CipherOptions />
+      <Monoalphabetic />
 
     </Box>
 
