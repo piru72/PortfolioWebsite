@@ -1,6 +1,6 @@
-import { getMonoAlphaBeticMapping } from './Mapper.js';
+import { getMonoAlphaBeticMapping } from './Mapper.ts';
 
-export function applyMonoalphabetic(plainText) {
+export function applyMonoalphabetic(plainText : string) : string {
     
     var monoalphabeticMapping = getMonoAlphaBeticMapping();
     var cipherText = '';
@@ -13,16 +13,6 @@ export function applyMonoalphabetic(plainText) {
     return cipherText;
 }
 
-export function applyPolyalphabetic(plainText, key) {
 
-}
-
-export function applyRowTransposition(plainText, key) {
-    
-}
-
-export function applyColumnTransposition(plainText, key) {
-    
-}
 
 
