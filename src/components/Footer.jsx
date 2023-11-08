@@ -58,11 +58,11 @@ export default function Footer() {
       bg={useColorModeValue('gray.50', 'gray.900')}
 
       width="100%"
-      position="fixed"
+
       bottom="0"
       left="0"
-     
-      
+
+
       textAlign="center"
 
       color={useColorModeValue('gray.700', 'gray.200')}>

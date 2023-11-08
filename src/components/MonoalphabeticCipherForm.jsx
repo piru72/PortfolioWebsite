@@ -7,7 +7,7 @@ import { Heading , Box , Text } from '@chakra-ui/react'
 
 function MonoalphabeticCipherForm({ inputValue, setInputValue, outputValue, setOutputValue }) {
   return (
-    <div>
+    <Box>
 
 
       <Heading>Monoalphabetic Cipher Example</Heading>
@@ -39,6 +39,10 @@ function MonoalphabeticCipherForm({ inputValue, setInputValue, outputValue, setO
 
       <Box  display="flex"
       alignItems="center"
+      // give bottom margin to the box
+      mt={6}
+      mb={6}
+
       justifyContent="center" >
 
         <Box maxW='50rem' className="content">
@@ -63,7 +67,7 @@ function MonoalphabeticCipherForm({ inputValue, setInputValue, outputValue, setO
 
 
 
-    </div>
+    </Box>
   );
 }
 
