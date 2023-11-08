@@ -39,7 +39,7 @@ function MonoalphabeticCipherForm({ inputValue, setInputValue, outputValue, setO
 
       <Box  display="flex"
       alignItems="center"
-      // give bottom margin to the box
+     // give bottom margin to the box
       mt={6}
       mb={6}
 
