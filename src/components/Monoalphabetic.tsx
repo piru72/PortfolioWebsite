@@ -6,13 +6,14 @@ import { useState } from 'react';
 import { applyMonoalphabetic } from '../controllers/Ciphers.ts';
 import CipherInputOutput from './CipherInputOutput.tsx';
 import ReactMarkdown from 'react-markdown';
-import { getMonoDescription } from '../controllers/ContentProvider.ts';
+
+import markdown from '../contents/MonoAlphabeticCipher.md'
 
 export default function Monoalphabetic() {
 
     const [inputValue, setInputValue] = useState('');
     const [outputValue, setOutputValue] = useState('');
-    const markdownContent = getMonoDescription();
+    
 
     const handleCipherInput = () => {
         const cipheredText = applyMonoalphabetic(inputValue);
@@ -46,10 +47,13 @@ export default function Monoalphabetic() {
 
             <Container maxW="container.xl" centerContent mb={10} left={0}>
                 <Box maxW='50rem' className="content">
-                    <ReactMarkdown>
-                       {markdownContent}
-                    </ReactMarkdown>
+                    <ReactMarkdown
+                        children={markdown}
+                        skipHtml
+                    />
                 </Box>
+
+
 
 
             </Container>
