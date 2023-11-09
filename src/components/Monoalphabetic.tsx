@@ -7,6 +7,7 @@ import { applyMonoalphabetic } from '../controllers/Ciphers.ts';
 import CipherInputOutput from './CipherInputOutput.tsx';
 import ReactMarkdown from 'react-markdown';
 
+// @ts-ignore 
 import markdown from '../contents/MonoAlphabeticCipher.md'
 
 export default function Monoalphabetic() {
