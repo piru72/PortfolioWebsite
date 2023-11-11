@@ -21,13 +21,13 @@ import {
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
-
+import { Link } from 'react-router-dom';
 
 
 interface Props {
     children: React.ReactNode
 }
-const Links = ['Ciphers', 'Blog']
+const Links = ['Ciphers', 'Blog'  , 'Portfolio']
 
 
 const NavLink = (props: Props) => {
@@ -68,36 +68,38 @@ export default function Simple() {
                         <Box>Algo Applier </Box>
                         <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
                             {Links.map((link) => (
-                                <NavLink key={link}>{link}</NavLink>
+                                <Link key={link} to={link.toLowerCase()}>
+                                    <NavLink>{link}</NavLink>
+                                </Link>
                             ))}
                         </HStack>
                     </HStack>
                     <Flex alignItems={'center'}>
-                    <Stack direction={'row'} spacing={7}>
-                        <Button onClick={toggleColorMode}>
-                            {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-                        </Button>
-                        <Menu>
-                            <MenuButton
-                                as={Button}
-                                rounded={'full'}
-                                variant={'link'}
-                                cursor={'pointer'}
-                                minW={0}>
-                                <Avatar
-                                    size={'sm'}
-                                    src={
-                                        'https://avatars.githubusercontent.com/u/63257806?s=96&v=4'
-                                    }
-                                />
-                            </MenuButton>
-                            <MenuList>
-                                <MenuItem>Link 1</MenuItem>
-                                <MenuItem>Link 2</MenuItem>
-                                <MenuDivider />
-                                <MenuItem>Link 3</MenuItem>
-                            </MenuList>
-                        </Menu>
+                        <Stack direction={'row'} spacing={7}>
+                            <Button onClick={toggleColorMode}>
+                                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+                            </Button>
+                            <Menu>
+                                <MenuButton
+                                    as={Button}
+                                    rounded={'full'}
+                                    variant={'link'}
+                                    cursor={'pointer'}
+                                    minW={0}>
+                                    <Avatar
+                                        size={'sm'}
+                                        src={
+                                            'https://avatars.githubusercontent.com/u/63257806?s=96&v=4'
+                                        }
+                                    />
+                                </MenuButton>
+                                <MenuList>
+                                    <MenuItem>Link 1</MenuItem>
+                                    <MenuItem>Link 2</MenuItem>
+                                    <MenuDivider />
+                                    <MenuItem>Link 3</MenuItem>
+                                </MenuList>
+                            </Menu>
                         </Stack>
                     </Flex>
                 </Flex>
@@ -118,46 +120,3 @@ export default function Simple() {
 }
 
 
-
-//                     <Flex alignItems={'center'}>
-//                         <Stack direction={'row'} spacing={7}>
-//                             
-
-//                             <Menu>
-//                                 <MenuButton
-//                                     as={Button}
-//                                     rounded={'full'}
-//                                     variant={'link'}
-//                                     cursor={'pointer'}
-//                                     minW={0}>
-//                                     <Avatar
-//                                         size={'sm'}
-//                                         src={'https://avatars.dicebear.com/api/male/username.svg'}
-//                                     />
-//                                 </MenuButton>
-//                                 <MenuList alignItems={'center'}>
-//                                     <br />
-//                                     <Center>
-//                                         <Avatar
-//                                             size={'2xl'}
-//                                             src={'https://avatars.dicebear.com/api/male/username.svg'}
-//                                         />
-//                                     </Center>
-//                                     <br />
-//                                     <Center>
-//                                         <p>Username</p>
-//                                     </Center>
-//                                     <br />
-//                                     <MenuDivider />
-//                                     <MenuItem>Your Servers</MenuItem>
-//                                     <MenuItem>Account Settings</MenuItem>
-//                                     <MenuItem>Logout</MenuItem>
-//                                 </MenuList>
-//                             </Menu>
-//                         </Stack>
-//                     </Flex>
-//                 </Flex>
-//             </Box>
-//         </>
-//     )
-// }
