@@ -3,12 +3,12 @@ import { Box } from '@chakra-ui/react'
 import { Heading } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 import { useState } from 'react';
-import { applyMonoalphabetic } from '../controllers/Ciphers.ts';
-import CipherInputOutput from './CipherInputOutput.tsx';
+import { applyMonoalphabetic } from '../../controllers/Ciphers.ts';
+import CipherInputOutput from '../CipherInputOutput.tsx';
 import ReactMarkdown from 'react-markdown';
 
 // @ts-ignore 
-import markdown from '../contents/MonoAlphabeticCipher.md'
+import markdown from '../../contents/MonoAlphabeticCipher.md'
 
 export default function Monoalphabetic() {
 
@@ -28,9 +28,11 @@ export default function Monoalphabetic() {
     return (
 
         <Box>
+               
+            
 
             <Heading as="h1" size="xl" textAlign="center" color="blue.500" mb={5} >
-                Monoalphabetic Cipher
+                Columntransposition Cipher
             </Heading>
 
 
