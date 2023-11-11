@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-export default function CipherOptions(onButtonClick: any) {
+export default function CipherOptions() {
 
     const navigate = useNavigate();
     const navigateTo = (path: string) => {
