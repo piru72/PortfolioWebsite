@@ -111,7 +111,7 @@ export default function CallToActionWithVideo() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={"src/assets/PIRU72.png"}
+              src={"https://raw.githubusercontent.com/piru72/AlgoApplier/main/src/assets/PIRU72.png"}
             />
           </Box>
         </Flex>
