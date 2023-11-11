@@ -1,25 +1,18 @@
-import React from 'react';
+import { Box, Button, Container } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 const BlogIndex = () => {
-  
-  const blogPosts = [
-    { id: 1, title: 'First Blog Post', content: 'This is the content of the first blog post.' },
-    { id: 2, title: 'Second Blog Post', content: 'This is the content of the second blog post.' },
 
-  ];
+  const navigate = useNavigate();
+  const navigateTo = (path: string) => {
+    navigate(path);
+  }
+
 
   return (
-    <div>
-      <h1>Blog Index</h1>
-      <ul>
-        {blogPosts.map((post) => (
-          <li key={post.id}>
-            <h2>{post.title}</h2>
-            <p>{post.content}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Container> 
+    <Box><Button w="15rem" colorScheme='blue' onClick={() => navigateTo('/blog/ciphers')}>Cipher Algorithms</Button> </Box>
+    </Container>
   );
 };
 

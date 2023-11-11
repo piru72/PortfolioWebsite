@@ -1,33 +1,30 @@
 'use client'
 
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
-    Box,
-    Flex,
     Avatar,
+    Box,
     Button,
+    Flex,
+    HStack,
+    IconButton,
     Menu,
     MenuButton,
-    MenuList,
-    MenuItem,
     MenuDivider,
-    useDisclosure,
-    useColorModeValue,
+    MenuItem,
+    MenuList,
     Stack,
     useColorMode,
-    IconButton,
-    HStack
-
-
-} from '@chakra-ui/react'
-import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
+    useColorModeValue,
+    useDisclosure
+} from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 
 interface Props {
     children: React.ReactNode
 }
-const Links = ['Ciphers', 'Blog'  , 'Portfolio']
+const Links = ['Blog'  , 'Portfolio']
 
 
 const NavLink = (props: Props) => {
