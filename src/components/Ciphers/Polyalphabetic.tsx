@@ -3,21 +3,21 @@ import { Box } from '@chakra-ui/react'
 import { Heading } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 import { useState } from 'react';
-import { applyMonoalphabetic } from '../../controllers/Ciphers.ts';
+import { applyPolyAlphabetic } from '../../controllers/Ciphers.ts';
 import CipherInputOutput from '../CipherInputOutput.tsx';
 import ReactMarkdown from 'react-markdown';
 
 // @ts-ignore 
-import markdown from '../../contents/MonoAlphabeticCipher.md'
+import markdown from '../../contents/PolyAlphabeticCipher.md'
 
-export default function Monoalphabetic() {
+export default function Polyalphabetic() {
 
     const [inputValue, setInputValue] = useState('');
     const [outputValue, setOutputValue] = useState('');
     
 
     const handleCipherInput = () => {
-        const cipheredText = applyMonoalphabetic(inputValue);
+        const cipheredText = applyPolyAlphabetic(inputValue);
         setOutputValue(cipheredText);
     };
 
