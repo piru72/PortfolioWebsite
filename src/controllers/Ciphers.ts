@@ -44,6 +44,27 @@ export function applyPolyAlphabetic(plainText: string): string {
     return cipherText;
 }
 
+export function applyRowTransposition(plainText: string) : string{
+
+    
+    var plainText = plainText.replace(/\s/g, "");
+
+
+    var key = "41532";
+    var keyLen = key.length;
+
+    while(plainText.length % keyLen != 0){
+        plainText += "x";
+    }
+
+  
+
+    
+
+
+    return plainText+ "\n";
+}
+
 
 
 

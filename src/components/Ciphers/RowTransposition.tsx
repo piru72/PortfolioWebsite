@@ -3,12 +3,15 @@ import { Box } from '@chakra-ui/react'
 import { Heading } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 import { useState } from 'react';
-import { applyMonoalphabetic } from '../../controllers/Ciphers.ts';
+import { applyRowTransposition } from '../../controllers/Ciphers.ts';
 import CipherInputOutput from '../CipherInputOutput.tsx';
 import ReactMarkdown from 'react-markdown';
 
 // @ts-ignore 
-import markdown from '../../contents/MonoAlphabeticCipher.md'
+import markdown from '../../contents/RowTranspositionCipher.md'
+import remarkGfm from 'remark-gfm'
+
+
 
 export default function Monoalphabetic() {
 
@@ -17,7 +20,7 @@ export default function Monoalphabetic() {
     
 
     const handleCipherInput = () => {
-        const cipheredText = applyMonoalphabetic(inputValue);
+        const cipheredText = applyRowTransposition(inputValue);
         setOutputValue(cipheredText);
     };
 
@@ -50,13 +53,9 @@ export default function Monoalphabetic() {
 
             <Container maxW="container.xl" centerContent mb={10} left={0}>
                 <Box maxW='50rem' className="content">
-                    <ReactMarkdown
-                        children={markdown}
-                        skipHtml
-                    />
+                    
+                    <ReactMarkdown remarkPlugins={[remarkGfm]} skipHtml>{markdown}</ReactMarkdown>
                 </Box>
-
-
 
 
             </Container>
