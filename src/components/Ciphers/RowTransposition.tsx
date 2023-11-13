@@ -8,7 +8,7 @@ import CipherInputOutput from '../CipherInputOutput.tsx';
 import ReactMarkdown from 'react-markdown';
 
 // @ts-ignore 
-import markdown from '../../contents/RowTranspositionCipher.md'
+import markdown from '../../contents/RowTransPositionCipher.md'
 import remarkGfm from 'remark-gfm'
 
 
