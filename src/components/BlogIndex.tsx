@@ -10,7 +10,7 @@ const BlogIndex = () => {
 
 
   return (
-    <Container> 
+    <Container maxW="5xl" py={10}> 
     <Box><Button w="15rem" colorScheme='blue' onClick={() => navigateTo('/blog/ciphers')}>Cipher Algorithms</Button> </Box>
     </Container>
   );

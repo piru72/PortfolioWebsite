@@ -24,7 +24,7 @@ import { Link } from 'react-router-dom';
 interface Props {
     children: React.ReactNode
 }
-const Links = ['Blog'  , 'Portfolio']
+const Links = ['Blog'  , 'About Me']
 
 
 const NavLink = (props: Props) => {
