@@ -15,6 +15,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom';
+import BasicStatistics  from './ProblemSolving'
 
 export default function CallToActionWithVideo() {
     const navigate = useNavigate();
@@ -116,6 +117,7 @@ export default function CallToActionWithVideo() {
           </Box>
         </Flex>
       </Stack>
+      <BasicStatistics/>
     </Container>
   )
 }
