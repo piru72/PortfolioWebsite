@@ -75,7 +75,7 @@ export default function CallToActionWithVideo() {
               px={6}
               onClick={() => navigateTo('/blog')}
               leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-              See my thoughts
+              Explore my thoughts
 
             </Button>
           </Stack>
