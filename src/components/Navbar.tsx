@@ -1,5 +1,3 @@
-'use client'
-
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
     Avatar,
