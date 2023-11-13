@@ -64,7 +64,7 @@ export default function CallToActionWithVideo() {
               px={6}
               colorScheme={'red'}
               bg={'red.400'}
-              onClick={() => navigateTo('/portfolio')}
+              onClick={() => navigateTo('/about me')}
               _hover={{ bg: 'red.500' }}>
               Know about me
             </Button>
