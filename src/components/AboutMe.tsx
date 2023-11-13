@@ -5,8 +5,11 @@ import {
   Flex
 } from '@chakra-ui/react';
 import { Link as ScrollLink } from 'react-scroll';
-import ProblemSolving from './ProblemSolving';
+import ProblemSolving from './AboutMe/ProblemSolving';
+import Contact from './AboutMe/Contact';
 
+
+const Sections = ['Skills'  , 'Education', 'Experiences'  , 'Achievements' , 'Problem Solving' , 'Projects', 'Social' , 'Contact Me']
 // Your component
 const YourComponent = () => {
   return (
@@ -14,15 +17,20 @@ const YourComponent = () => {
       {/* Buttons */}
       <Flex justify="space-around" mb={8}>
         
-        <Button>
-          <ScrollLink to="problemSolvingSection" smooth={true} duration={500}>
-            Problem Solving
-          </ScrollLink>
-        </Button>
+      {Sections.map((section) => (
+          <Button key={section}>
+            <ScrollLink to={`${section.toLowerCase().replace(/\s/g, '')}Section`} smooth={true} duration={500}>
+              {section}
+            </ScrollLink>
+          </Button>
+        ))}
       </Flex>
 
       
-    <ProblemSolving />
+   
+    
+    <ProblemSolving id="problemsolvingSection" />
+    <Contact />
     </Container>
   );
 };

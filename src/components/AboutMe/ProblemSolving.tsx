@@ -19,6 +19,7 @@ interface StatsCardProps {
     title: string
     stat: string
     icon: ReactNode
+    
 }
 
 function StatsCard(props: StatsCardProps) {
@@ -51,9 +52,13 @@ function StatsCard(props: StatsCardProps) {
     )
 }
 
-export default function BasicStatistics() {
+interface ProblemSolvingProps {
+    id: string
+  }
+
+  const ProblemSolving = ({ id }: ProblemSolvingProps) => {
     return (
-        <Box id="problemSolvingSection" maxW="7xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
+        <Box id={id} mb= {"50rem"} maxW="7xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
             <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={10} fontWeight={'bold'}>
                 Our company is expanding, you could be too.
             </chakra.h1>
@@ -65,3 +70,4 @@ export default function BasicStatistics() {
         </Box>
     )
 }
+export default ProblemSolving;
