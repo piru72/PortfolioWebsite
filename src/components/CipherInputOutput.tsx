@@ -1,5 +1,5 @@
 
-import { Input, Button, ButtonGroup, Box, Text, Container } from '@chakra-ui/react';
+import { Box, Button, ButtonGroup, Container, Input, Text } from '@chakra-ui/react';
 
 interface CipherInputOutputProps {
   inputValue: string;

@@ -1,15 +1,10 @@
 // Import necessary components
-import { Link as ScrollLink } from 'react-scroll';
 import {
   Button,
   Container,
-  Box,
-  Heading,
-  Text,
-  Flex,
-  useColorModeValue,
+  Flex
 } from '@chakra-ui/react';
-import React from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 import ProblemSolving from './ProblemSolving';
 
 // Your component
