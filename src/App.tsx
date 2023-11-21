@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AboutMe from './components/AboutMe';
-import Blog from './components/BlogIndex';
-import CipherIndex from './components/CipherIndex';
+import Blog from './components/Blog/BlogIndex';
+import CipherIndex from './components/Ciphers/CipherIndex';
 import Introduction from './components/Introduction';
 
 function App() {

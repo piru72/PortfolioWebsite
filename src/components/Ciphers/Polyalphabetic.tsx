@@ -4,7 +4,7 @@ import { Heading } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 import { useState } from 'react';
 import { applyPolyAlphabetic } from '../../controllers/Ciphers.ts';
-import CipherInputOutput from '../CipherInputOutput.tsx';
+import CipherInputOutput from './CipherInputOutput.tsx';
 import ReactMarkdown from 'react-markdown';
 
 // @ts-ignore 

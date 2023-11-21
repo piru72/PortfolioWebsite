@@ -1,10 +1,10 @@
 import { Box, Button, ButtonGroup, Flex } from '@chakra-ui/react';
 
 import { useState } from 'react';
-import ColumnTranspositionCipher from './Ciphers/ColumnTransposition';
-import MonoalphabeticCipher from './Ciphers/Monoalphabetic';
-import PolyalphabeticCipher from './Ciphers/Polyalphabetic';
-import RowTranspositionCipher from './Ciphers/RowTransposition';
+import ColumnTranspositionCipher from './ColumnTransposition';
+import MonoalphabeticCipher from './Monoalphabetic';
+import PolyalphabeticCipher from './Polyalphabetic';
+import RowTranspositionCipher from './RowTransposition';
 
 function CipherIndex() {
   

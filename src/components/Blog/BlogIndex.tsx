@@ -6,7 +6,7 @@ import {
   Heading,
   Wrap
 } from '@chakra-ui/react';
-import BlogItem from './Blog/ListItem';
+import BlogItem from './ListItem';
 
 
 
