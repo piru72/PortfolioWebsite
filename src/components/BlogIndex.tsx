@@ -1,19 +1,34 @@
-import { Box, Button, Container } from '@chakra-ui/react';
-import { useNavigate } from 'react-router-dom';
+'use client'
 
-const BlogIndex = () => {
+import {
+  Container,
+  Divider,
+  Heading,
+  Wrap
+} from '@chakra-ui/react';
+import BlogItem from './BlogItem';
 
-  const navigate = useNavigate();
-  const navigateTo = (path: string) => {
-    navigate(path);
-  }
 
 
+
+
+const ArticleList = () => {
   return (
-    <Container maxW="5xl" py={10}> 
-    <Box><Button w="15rem" colorScheme='blue' onClick={() => navigateTo('/blog/ciphers')}>Cipher Algorithms</Button> </Box>
-    </Container>
-  );
-};
+    <Container maxW={'7xl'} p="12">
 
-export default BlogIndex;
+      <Heading as="h2" marginTop="5">
+        Latest articles
+      </Heading>
+      <Divider marginTop="5" />
+      <Wrap spacing="30px" marginTop="5">
+
+
+        <BlogItem />
+
+      </Wrap>
+
+    </Container>
+  )
+}
+
+export default ArticleList
