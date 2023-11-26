@@ -129,21 +129,116 @@ So putting this in simple term , the only aj that are valid are that have the sa
 
 **CodeForces 1805A	We Need the Zero**
 
+Just like any other bit problem we can think this problem as single bit first . 
+
+
+How can the xor of the whole array be zero ?
+
+> Only if all the elements are same 
+
+So our intention is to make all the elements same . Even then threre is a chance that the xor will not be zero . When is that case ? 
+
+> When there are odd number of elements here 
+
+So keeping this two fact in mind we have to find such a number that will make all the elements same and the number of elements are odd .
+
+
+So in the time when there are even number of elements and the XOR of the whole array will not be zero then it is not possibble to make the elements zero . 
+
+Other wise we can simply consider that x is the xor of all the array .
+
 **CodeChef CHNGOR	Chang and Bitwise OR**
+
+The trick to solve this problem is to observe the fact that no matter what we do the resultant value will be the or of the whole array . So we can simply find out the or of the whole array and print that .
 
 **CodeForces 1601A	Array Elimination**
 
+So how can we basically turn this into 0 ? For a single bit we can observe that we can choose K only if the total numbebr of set bit are divisible by K in that case only at the end we will get result 0  after finitite number of actions also the answer always exists as 1 will always be the answer as we will be able to subtract it from the array .
+
 **CodeForces 1516B	AGAGA XOOORRR**
+
+So it will turn out that we will need to xor all the elements at last and have to check out if the elements are same . 
+
+We can further break down this probblem into a n^2 solve where we will break the array into two three part ans will see that the if the xor  of the threee parts are same .
+
+```cpp
+            int x = prefix_l_to_r(1, i);
+            int y = prefix_l_to_r(i + 1, j);
+            int z = prefix_l_to_r(j + 1, n);
+```
+
+This will ensure that there exists three equal part if there xor are same .
+
+
+On the other hand the answer will be valid even if there are only two valid part which can be solved in N time complexity . in that case we just have to break the array into two part rather than three parts ad check if xor of the two parts are same or not .
+
+
+If none of the requirements are met then we are sure that the answer will be no .
+
 
 **CodeChef CHEFQUE	Chef and Queries**
 
+The problem is a tricky one where working with memory optimization is the key to solve the problem . So which DS can we use to solve the problem ?
+
+
+We can keep a bit set of to keep the track of the existence of the elements . Now why do we need to keep a bit set ? because each bit will represent a number and we can keep track of the existence of the number in the array . To keep track of the numbber only N bit will be needed . Where as if we use a array for each number we would have need 32 bit for each element. So we are saving a lot of memory space .
+
+Also we can use bool vector which would also take almost the same memory space .
+
+After that we can just generate the numbebr and do the operation as needed. And keep track of the number using the bit set or bool vector or any DS that is memory efficient for such a large number .
+
 **CodeForces 276D	Little Girl and Maximum XOR**
+
+So the first thing we can observe is that we can elminite the case of l == r 
+
+
+For other cases we have to find out the maxmimum bit that is not equal in both number which will result in `1` as all other case it will lead to zero which is not the optimal solution so we will not be able to take that
 
 **CodeForces 1045I	Palindrome Pairs**
 
+The problem is pretty interesting . At first we have to observe under which condition a string can be made palindrome .
+
+1. When there are all the character of the string has even number of occurance
+2. When only one is odd and all other are even
+
+
+So for both the case we just need to keep the occurance of the character whether they are even or odd . 
+
+So now we get a mask which describes the occurances of each character in the string. Now need other string which will satisfy the condition above when concatinated above .
+
+Now 1 in the string means odd occurance 
+and 0 in the string means even occurance
+
+So if for a charater in both string 
+ 
+00 then it is valid
+11 then it is valid 
+
+which takes us to the xor property of bit . 
+
+and also we can say that , for each string there are 27 ways to get a palindrome pair . 1 is when 0 elements are different which has only 1 option and 2 is when only 1 element is different which has 26 option . 
+
+
+So we have to check for the occurance of the 27 options in the upcoming string then we can be certain about how many palindrome pair we can make with the upcoming string .
+
 **CodeChef ODTPIC	Odd Topic**
 
+To solve the problem we can use prefix XOR property. 
+
+
+For each of the array we will maintain a array which will tell us the occurances of a element at a certain range which can easily be found out using prefix xor property .
+
+
+So in each index of the prefix xor we will keep track the occurances of the chracter at that point whether they are even or odd .
+
+
+So when a query comes we will just merge two masks and output the number of set bits after the xor . because only then the odd bits will be setted on  and of they have equal amount of  occurances then there will be only even number of set bits .
+
 **CodeForces 1614C	Divan and bitwise operations**
+
+The answer finally concludes to that is equal x * 2^n-1
+
+where x is the OR of all the elements of the array .
 
 **CodeChef PPXOR	Polo the Penguin and the XOR**
 
