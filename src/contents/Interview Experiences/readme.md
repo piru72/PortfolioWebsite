@@ -31,3 +31,26 @@ For the technical part mostly OOP and SE question were there the question were s
 
 
 ## Viva
+
+### About yourself
+
+1. Tell me about yourself?
+### OOP
+1. What is the difference between overloading and overriding? Which one is run in compile time and which one is done in run time and why ?
+2. What is the use of abstraction and inheritance ?
+3. Give a scenario where inheritance is required?
+
+
+### Data structure
+1. How to delete a node and update a node in a binary search tree?
+
+### Algorithm 
+1. How quick sort works and when the worst case complexity arrives ?
+
+### Database 
+1. What is indexing ? Why is it used ? Type of indexing there with examples?
+2. What is required in Many to many Relation table?
+
+### Problem solving 
+1. Find the occurances of each character in a string ?
+2. Find the 2nd max element in a single loop?
