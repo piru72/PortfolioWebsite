@@ -43,6 +43,7 @@ For the technical part mostly OOP and SE question were there the question were s
 
 ### Data structure
 1. How to delete a node and update a node in a binary search tree?
+2. How to do preorder traversal and post order traversal in a binary search tree?
 
 ### Algorithm 
 1. How quick sort works and when the worst case complexity arrives ?
